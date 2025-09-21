@@ -1,6 +1,6 @@
 {
   "name": "@globetracker/service-control",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Service control and lifecycle management for distributed services",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
