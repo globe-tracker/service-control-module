@@ -7,6 +7,7 @@
     "files": [
         "dist/**/*"
     ],
+    "type": "module",
     "scripts": {
         "build": "tsc",
         "dev": "tsc --watch",
@@ -42,5 +43,17 @@
         "@biomejs/biome": "1.9.4",
         "@types/node": "^20.0.0",
         "typescript": "~5.9.0"
+    },
+    "homepage": "https://github.com/globetracker/service-control-module",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/globetracker/service-control-module.git"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "bugs": {
+        "url": "https://github.com/globetracker/service-control-module/issues"
     }
 }
