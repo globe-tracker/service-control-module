@@ -1,0 +1,38 @@
+{
+    "name": "@globetracker/service-control",
+    "version": "1.0.0",
+    "description": "Service control and lifecycle management for distributed services",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist/**/*"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "clean": "rm -rf dist",
+        "lint": "biome lint src/",
+        "format": "biome format src/",
+        "typecheck": "tsc --noEmit"
+    },
+    "keywords": [
+        "service",
+        "control",
+        "lifecycle",
+        "distributed",
+        "redis",
+        "heartbeat"
+    ],
+    "author": "Globetracker",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "@sinclair/typebox": "~0.32.35",
+        "winston": "~3.14.1"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "1.8.3",
+        "@types/node": "^20.0.0",
+        "typescript": "~5.4.5"
+    }
+}
