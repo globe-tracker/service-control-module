@@ -1,60 +1,60 @@
 {
-    "name": "@globetracker/service-control",
-    "version": "0.0.1",
-    "description": "Service control and lifecycle management for distributed services",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "files": [
-        "dist/**/*"
-    ],
-    "type": "module",
-    "scripts": {
-        "build": "tsc",
-        "dev": "tsc --watch",
-        "clean": "rm -rf dist",
-        "lint": "biome lint src/",
-        "format": "biome format src/",
-        "typecheck": "tsc --noEmit",
-        "release": "bun run scripts/release.js",
-        "release:patch": "bun run scripts/release.js patch",
-        "release:minor": "bun run scripts/release.js minor",
-        "release:major": "bun run scripts/release.js major",
-        "release:prerelease": "bun run scripts/release.js prerelease",
-        "release:dry-run": "bun run scripts/release.js patch --dry-run",
-        "release:skip-tests": "bun run scripts/release.js patch --skip-tests",
-        "publish:npm": "npm publish",
-        "publish:npm:dry-run": "npm publish --dry-run"
-    },
-    "keywords": [
-        "service",
-        "control",
-        "lifecycle",
-        "distributed",
-        "redis",
-        "heartbeat"
-    ],
-    "author": "Globetracker",
-    "license": "MIT",
-    "dependencies": {
-        "@sinclair/typebox": "~0.32.35",
-        "winston": "~3.14.1"
-    },
-    "devDependencies": {
-        "@biomejs/biome": "1.9.4",
-        "@types/node": "^20.0.0",
-        "typescript": "~5.9.0",
-        "ioredis": "~5.7.0"
-    },
-    "homepage": "https://github.com/globe-tracker/service-control-module",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/globe-tracker/service-control-module.git"
-    },
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org/"
-    },
-    "bugs": {
-        "url": "https://github.com/globe-tracker/service-control-module/issues"
-    }
+  "name": "@globetracker/service-control",
+  "version": "0.0.2",
+  "description": "Service control and lifecycle management for distributed services",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "lint": "biome lint src/",
+    "format": "biome format src/",
+    "typecheck": "tsc --noEmit",
+    "release": "bun run scripts/release.js",
+    "release:patch": "bun run scripts/release.js patch",
+    "release:minor": "bun run scripts/release.js minor",
+    "release:major": "bun run scripts/release.js major",
+    "release:prerelease": "bun run scripts/release.js prerelease",
+    "release:dry-run": "bun run scripts/release.js patch --dry-run",
+    "release:skip-tests": "bun run scripts/release.js patch --skip-tests",
+    "publish:npm": "npm publish",
+    "publish:npm:dry-run": "npm publish --dry-run"
+  },
+  "keywords": [
+    "service",
+    "control",
+    "lifecycle",
+    "distributed",
+    "redis",
+    "heartbeat"
+  ],
+  "author": "Globetracker",
+  "license": "MIT",
+  "dependencies": {
+    "@sinclair/typebox": "~0.32.35",
+    "winston": "~3.14.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^20.0.0",
+    "typescript": "~5.9.0",
+    "ioredis": "~5.7.0"
+  },
+  "homepage": "https://github.com/globe-tracker/service-control-module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/globe-tracker/service-control-module.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "bugs": {
+    "url": "https://github.com/globe-tracker/service-control-module/issues"
+  }
 }
