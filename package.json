@@ -1,5 +1,5 @@
 {
-    "name": "globetracker-service-control",
+    "name": "@globetracker/service-control",
     "version": "1.0.0",
     "description": "Service control and lifecycle management for distributed services",
     "main": "dist/index.js",

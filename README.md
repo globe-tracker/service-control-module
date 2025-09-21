@@ -194,14 +194,30 @@ The release script automatically:
 2. **Quality Assurance**: Runs linting, type checking, and build
 3. **Version Bumping**: Updates package.json with new version
 4. **Git Operations**: Creates release commit and git tag
-5. **GitHub Release**: Creates GitHub release with changelog integration
-6. **CI/CD Trigger**: Automatically triggers CI/CD workflows
+5. **NPM Publishing**: Publishes package to npm registry as `@globetracker/service-control`
+6. **GitHub Release**: Creates GitHub release with changelog integration
+7. **CI/CD Trigger**: Automatically triggers CI/CD workflows
 
 #### Requirements
 
 - **GitHub CLI**: Install from <https://cli.github.com/> for release creation
+- **NPM Account**: Must be logged in to npm (`npm login`) for publishing
 - **Clean Working Directory**: Commit or stash changes before releasing
 - **Main Branch**: Must be on main/master branch to release
+
+#### NPM Publishing
+
+The package is automatically published to npm as `@globetracker/service-control` during the release process.
+
+**Manual NPM Commands:**
+
+```bash
+# Test npm publish (dry-run)
+bun run publish:npm:dry-run
+
+# Publish to npm manually
+bun run publish:npm
+```
 
 ## License
 
