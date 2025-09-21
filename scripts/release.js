@@ -196,6 +196,17 @@ function pushChanges() {
   console.log('✅ Changes pushed to remote')
 }
 
+function publishToNPM() {
+  console.log('📦 Publishing to npm...')
+  try {
+    exec('npm publish')
+    console.log('✅ Successfully published to npm')
+  } catch (error) {
+    console.error('❌ Failed to publish to npm:', error.message)
+    process.exit(1)
+  }
+}
+
 function createGitHubRelease(newVersion) {
   const tagName = `v${newVersion}`
   const releaseTitle = `Release ${tagName}`
@@ -269,6 +280,7 @@ async function main() {
       console.log('  - Create release commit')
       console.log(`  - Create git tag v${newVersion}`)
       console.log('  - Push changes to remote')
+      console.log(`  - Publish to npm as globetracker-service-control@${newVersion}`)
       console.log(`  - Create GitHub release v${newVersion}`)
       console.log('✅ Dry run completed successfully')
       return
@@ -284,11 +296,15 @@ async function main() {
     console.log('📤 Pushing changes...')
     pushChanges()
     
+    console.log('📦 Publishing to npm...')
+    publishToNPM()
+    
     console.log('🚀 Creating GitHub release...')
     createGitHubRelease(newVersion)
     
     console.log('✅ Release completed successfully!')
     console.log(`🎉 Version ${newVersion} has been released`)
+    console.log(`📦 Published to npm: globetracker-service-control@${newVersion}`)
     console.log('🐳 CI/CD workflow should now be triggered automatically')
     
   } catch (error) {
