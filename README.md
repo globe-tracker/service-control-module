@@ -158,6 +158,51 @@ The service controller uses the following Redis key patterns:
 - `{prefix}:state:{serviceName}` - Service state
 - `{prefix}:signal:{serviceName}` - Control signals
 
+## Development
+
+### Release Process
+
+This project uses an automated release script for version management and GitHub releases.
+
+#### Available Release Commands
+
+```bash
+# Patch release (1.0.0 → 1.0.1)
+bun run release:patch
+
+# Minor release (1.0.0 → 1.1.0)
+bun run release:minor
+
+# Major release (1.0.0 → 2.0.0)
+bun run release:major
+
+# Prerelease (1.0.0 → 1.0.1-rc.1)
+bun run release:prerelease
+
+# Dry run (see what would happen without making changes)
+bun run release:dry-run
+
+# Skip tests (use with caution)
+bun run release:skip-tests
+```
+
+#### Release Process
+
+The release script automatically:
+
+1. **Pre-release Checks**: Ensures clean working directory, correct branch, and remote origin
+2. **Quality Assurance**: Runs linting, type checking, and build
+3. **Version Bumping**: Updates package.json with new version
+4. **Git Operations**: Creates release commit and git tag
+5. **GitHub Release**: Creates GitHub release with changelog integration
+6. **CI/CD Trigger**: Automatically triggers CI/CD workflows
+
+#### Requirements
+
+- **GitHub CLI**: Install from <https://cli.github.com/> for release creation
+- **Clean Working Directory**: Commit or stash changes before releasing
+- **Main Branch**: Must be on main/master branch to release
+
 ## License
 
 MIT
