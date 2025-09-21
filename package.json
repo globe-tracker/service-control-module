@@ -42,7 +42,8 @@
     "devDependencies": {
         "@biomejs/biome": "1.9.4",
         "@types/node": "^20.0.0",
-        "typescript": "~5.9.0"
+        "typescript": "~5.9.0",
+        "ioredis": "~5.7.0"
     },
     "homepage": "https://github.com/globetracker/service-control-module",
     "repository": {
