@@ -41,7 +41,7 @@
     "@types/node": "^20.0.0",
     "typescript": "~5.9.0",
     "ioredis": "~5.7.0",
-    "@sinclair/typebox": "~0.32.35",
+    "@sinclair/typebox": "~0.34.0",
     "winston": "~3.17.0"
   },
   "homepage": "https://github.com/globe-tracker/service-control-module",
